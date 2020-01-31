@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const TodoForm = props => {
+const TodoForm = ({ addTodo }) => {
     const [todoText, setTodoText] = useState("");
 
     const handleChange = event => {
@@ -9,7 +9,7 @@ const TodoForm = props => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        props.addTodo(todoText)
+        addTodo(todoText)
         setTodoText("")
     }
 

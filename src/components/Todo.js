@@ -1,9 +1,9 @@
 import React from "react";
 
-const Todo = ({ item }) => {
+const Todo = ({ todo, toggleTodo }) => {
     return (
-        <div>
-            <p>{item}</p>
+        <div className={`${todo.completed ? " completed" : ""}`} onClick={() => toggleTodo(todo.id)}>
+            <p>{todo.item}</p>
         </div>
     )
 }
